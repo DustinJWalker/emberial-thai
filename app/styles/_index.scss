@@ -1,0 +1,22 @@
+.hero {
+  display: flex;
+  justify-content: center;
+  background-color: #612856;
+  color: $c-white;
+}
+
+.title {
+  border-bottom: 0.1rem solid $c-black;
+}
+
+.grid {
+  display: flex;
+  flex-basis: calc(100% / 4);
+}
+
+
+.cart-btn {
+  border: none;
+  background: $c-success;
+  color: $c-white;
+}
