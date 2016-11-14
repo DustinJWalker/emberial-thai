@@ -1,0 +1,28 @@
+.container {
+  max-width: 60rem;
+  margin: 0 auto;
+}
+
+
+// blcok level grid component
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+
+  // modifier to center items in these grids
+  &--centered {
+    justify-content: center;
+  }
+// element with grid components
+  &__item {
+    flex-basis: calc(100% / 4);
+    flex-grow: 1;
+    // modified grid__item that cannot be too wide
+    &--max-half{
+      max-width: 50%;
+      @media(max-width: 500px) {
+        max-width: 100%;
+      }
+    }
+  }
+}
