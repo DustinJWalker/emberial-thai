@@ -9,6 +9,7 @@
 .grid {
     display: flex;
     flex-wrap: wrap;
+    margin: -1rem;
 
   // modifier to center items in these grids
   &--centered {

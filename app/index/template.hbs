@@ -1,44 +1,43 @@
 <div class="hero">
-  {{!-- <div class="container"> --}}
+  <div class="container">
     <h2 class="hero-title">Get Food Delivered Fast</h2>
-  {{!-- </div> --}}
+  </div>
 </div>
 
-<div class="container">
-  <h3 class="title">Menu</h3>
-  <div class="grid">
-    {{log model}}
-    {{#each model as |menu|}}
-      <div class="grid__item">
-        {{log menu}}
+{{!-- <div class="content"> --}}
+  <div class="container">
+
+    <div class="grid">
+      <div class="grid__item grid__item--left">
+        <h3 class="title">Menu</h3>
+        {{#each model as |menu|}}
         <div class="card">
-          <h3 class="card__header">{{ menu.name }}</h3>
-    {{#each menu.menuItems as |value|}}
-    {{log value }}
-      <p class="card__content--name">{{ value.name }}</p>
-      <p class="card__content--description">{{ value.description }}</p>
-      <p class="card__content--price">{{ value.price }}</p>
+          <h2 class="card__header">{{ menu.name }}</h2>
+          {{#each menu.menuItems as |value|}}
+          <p class="card__name">{{ value.name }}</p>
+          <p class="card__description">{{ value.description }}</p>
+          <p class="card__price">{{ value.price }}</p>
+          <button class="order-btn">Order</button>
+        {{!-- </div> --}}
+        {{/each}}
+      </div>
       {{/each}}
     </div>
-  </div>
-  {{/each}}
-</div>
 
-<div class="grid">
-  <div class="grid__item">
-    <div class="grid__item--half">
+    <div class="grid__item grid__item--right">
       <h3 class="title">Your Order</h3>
-        <div class="card">
-          <h3 class="card__header">Cart</h3>
+      <div class="card">
+        <h2 class="card__header">Cart</h2>
+        <div class="card__content">
           <h4>Add Something</h4>
           <p>No items have been added to the cart!</p>
-          {{#each cart as |cart|}}
-          <p>{{ cart }}</p>
-          {{/each}}
-          <button class="cart-btn">Submit Order</button>
         </div>
+        <div class="card__content--total">
+          <p>Total</p>
+          <p>$0.00</p>
+        </div>
+        <button type="button" class="order-btn">Submit Order</button>
+      </div>
     </div>
   </div>
-</div>
-
 </div>

@@ -3,19 +3,32 @@
   justify-content: center;
   background-color: #612856;
   color: $c-white;
+  &-title {
+    text-align: center;
+  }
 }
 
 .title {
   border-bottom: 0.1rem solid $c-black;
 }
 
-.grid {
-  display: flex;
-  flex-basis: calc(100% / 4);
+
+.card {
+  box-shadow: 0.2rem 0.2rem 0.4rem rgba(#000, 0.4);
+  &__header {
+    background: $c-primary;
+    color: $c-white;
+    margin: 0;
+    padding: 0.5rem;
+  }
+
+  &__item {
+
+  }
 }
 
 
-.cart-btn {
+.order-btn {
   border: none;
   background: $c-success;
   color: $c-white;
