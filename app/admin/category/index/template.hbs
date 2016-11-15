@@ -1,1 +1,17 @@
-{{outlet}}
+{{#link-to "category.new-item"}}Add New{{/link-to}}
+<div class="contaier">
+  <table>
+    <thead>
+      <th>Namae</th>
+    </thead>
+
+    <tbody>
+      {{#each model as |category|}}
+        <tr>
+          <td>{{ category.name }}</td>
+          <td>{{ category.description }}</td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>
