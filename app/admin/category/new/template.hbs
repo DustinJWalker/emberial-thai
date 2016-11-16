@@ -1,1 +1,11 @@
-{{outlet}}
+<div class="container">
+  <h2 clas="title">New Category</h2>
+  <form {{action "saveForm" name goal description on="submit"}}>
+    <h4>Name</h4>
+    <p>
+    {{input type="text" required="true" value=name }}
+    </p>
+    {{#link-to "admin.category.index"}}Back{{/link-to}}
+    <button type="submit" name="button">Save</button>
+  </form>
+</div>

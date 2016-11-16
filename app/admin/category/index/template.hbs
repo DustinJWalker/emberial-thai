@@ -1,17 +1,15 @@
-{{#link-to "category.new-item"}}Add New{{/link-to}}
-<div class="contaier">
-  <table>
-    <thead>
-      <th>Namae</th>
-    </thead>
-
-    <tbody>
-      {{#each model as |category|}}
-        <tr>
-          <td>{{ category.name }}</td>
-          <td>{{ category.description }}</td>
-        </tr>
-      {{/each}}
-    </tbody>
-  </table>
+<h2 class="title">Categories</h2>
+<div class="card">
+  <div class="add__new--btn">
+    {{#link-to "admin.category.new"}}Add New{{/link-to}}
+  </div>
+  <h4>Name</h4>
+  <div class="add__items">
+    {{#each model as |values|}}
+      <div class="info">
+        <p>{{ values.name }}</p>
+        {{#link-to "admin.category.detail"}}Detail{{/link-to}}
+      </div>
+    {{/each}}
+  </div>
 </div>
