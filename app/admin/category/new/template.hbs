@@ -3,7 +3,7 @@
     <h3 class="card__header">New Category</h3>
     <form {{action "saveForm" name goal description on="submit"}}>
       <div class="input__field">
-      <p>Name</p>
+      <p class="input__title">Name</p>
         {{input type="text" required="true" value=name }}
       </div>
       <div class="card__footer">
