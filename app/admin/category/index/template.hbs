@@ -1,14 +1,17 @@
 <h2 class="title">Categories</h2>
 <div class="card">
-  <div class="add__new--btn">
-    {{#link-to "admin.category.new"}}Add New{{/link-to}}
+  <div class="add__new">
+    <div class="add__new--btn">
+      {{#link-to "admin.category.new"}}Add New{{/link-to}}
+    </div>
   </div>
-  <h4>Name</h4>
+
+  <h4 class="add__new-title">Name</h4>
   <div class="add__items">
     {{#each model as |values|}}
       <div class="info">
         <p>{{ values.name }}</p>
-        {{#link-to "admin.category.detail"}}Detail{{/link-to}}
+        {{#link-to "admin.category.detail"}}Details{{/link-to}}
       </div>
     {{/each}}
   </div>
