@@ -14,12 +14,15 @@
 
 
 .card {
+
   box-shadow: 0.2rem 0.2rem 0.4rem rgba(#000, 0.4);
+  background-color: $c-white;
   &__header {
     background: $c-primary;
     color: $c-white;
     margin: 0;
     padding: 0.5rem;
+
   }
 
   &__content {
@@ -28,6 +31,7 @@
     &--total {
       padding: 0.5rem;
       border-bottom: 0.1rem solid $c-dark-gray;
+
     }
   }
 

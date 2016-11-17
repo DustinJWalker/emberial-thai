@@ -1,0 +1,39 @@
+.add__new {
+  background: $c-white;
+}
+
+.add__new--btn {
+  display: inline-block;
+  margin: 1rem;
+  background: $c-success;
+  border: none;
+  color: $c-white;
+  padding: 1rem;
+  text-decoration: none;
+}
+
+.add__new-title {
+  padding: 1rem;
+}
+
+.info  {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  background: $c-white;
+}
+
+.input__field  {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding:  0.5rem;
+}
+
+.card__footer {
+  display: flex;
+  justify-content: space-between;
+  border-top: 0.1rem solid $c-gray;
+
+}

@@ -1,11 +1,15 @@
 <div class="container">
-  <h2 clas="title">New Category</h2>
-  <form {{action "saveForm" name goal description on="submit"}}>
-    <h4>Name</h4>
-    <p>
-    {{input type="text" required="true" value=name }}
-    </p>
-    {{#link-to "admin.category.index"}}Back{{/link-to}}
-    <button type="submit" name="button">Save</button>
-  </form>
+  <div class="card">
+    <h3 class="card__header">New Category</h3>
+    <form {{action "saveForm" name goal description on="submit"}}>
+      <div class="input__field">
+      <p>Name</p>
+        {{input type="text" required="true" value=name }}
+      </div>
+      <div class="card__footer">
+        {{#link-to "admin.category.index" class="add__new--btn"}}Back{{/link-to}}
+        <button class="add__new--btn" type="submit" name="button">Submit</button>
+      </div>
+    </form>
+  </div>
 </div>
