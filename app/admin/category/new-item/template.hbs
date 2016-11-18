@@ -1,26 +1,21 @@
+<div class="container">
 <h2 class="title">Appetizers</h2>
-<form {{action "saveForm" name price description on="submit"}}>
+{{#simple-form startingValues=model onsubmit=(action "saveForm") as |formValues|}}
+  <p class="field">
+    {{input type="text" placeholder='name'  reuquired=true value=formValues.name}}
+  </p>
 
-  <div class="field">
-    <label for="name" class="field__label">Name</label>
-    {{input type="text" name='name' reuquired=true}}
-  </div>
+  <p class="field">
+    {{input type="text" placeholder='price' reuquired=true value=formValues.price}}
+  </p>
 
-  <div class="field">
-    <label for="price" class="field__label">Price</label>
-    {{input type="text" name='price' reuquired=true}}
-  </div>
-
-  <div class="field">
-    <label for="description" class="field__label">Description</label>
-    {{input type="text" name='description' reuquired=true}}
-  </div>
+  <p class="field">
+    {{input type="text" placeholder='description' reuquired=true value=formValues.description}}
+  </p>
 
   <div class="form__btn">
     {{#link-to "admint.category.detail"}}Back{{/link-to}}
     <button type="submit" name="button">Submit</button>
   </div>
-
-
-
-</form>
+  {{/simple-form}}
+</div>

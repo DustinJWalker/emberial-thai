@@ -1,7 +1,7 @@
 <div class="container">
   <div class="card">
     <h3 class="card__header">New Category</h3>
-    <form {{action "saveForm" name goal description on="submit"}}>
+    {{#simple-form startingValues=model onsubmit=(action "saveForm") as |formValues|}}>
       <div class="input__field">
       <p class="input__title">Name</p>
         {{input type="text" required="true" value=name }}
@@ -10,6 +10,6 @@
         {{#link-to "admin.category.index" class="add__new--btn"}}Back{{/link-to}}
         <button class="add__new--btn" type="submit" name="button">Submit</button>
       </div>
-    </form>
+    {{/simple-form}}
   </div>
 </div>
