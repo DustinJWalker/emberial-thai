@@ -13,8 +13,10 @@ Router.map(function() {
       this.route('detail');
       this.route('new-item');
     });
+    this.route('item', function(){
+      this.route('edit', { path: '/':id});
+    });
   });
-  this.route('edit-item-form');
 });
 
 export default Router;

@@ -9,15 +9,16 @@
     {{!-- <div class="grid__item"> --}}
       <div class="grid__item grid__item--left">
         <h3 class="title">Menu</h3>
-        {{#each model as |menu|}}
+        {{#each model as |value|}}
         <div class="card">
-          <h2 class="card__header">{{ menu.name }}</h2>
-          {{#each menu.menuItems as |value|}}
-          <p class="card__name">{{ value.name }}</p>
-          <p class="card__description">{{ value.description }}</p>
-          <p class="card__price">{{ value.price }}</p>
+          <h2 class="card__header">{{ value.name }}</h2>
+          {{#each value.menuItems as |item|}}
+        <div class="card__content">
+          <p class="card__name">{{ item.name }}</p>
+          <p class="card__description">{{ item.description }}</p>
+          <p class="card__price">{{ item.price }}</p>
           <button class="order-btn">Order</button>
-
+        </div>
 
           {{/each}}
       </div>
@@ -32,9 +33,9 @@
           <h4>Add Something</h4>
           <p>No items have been added to the cart!</p>
         </div>
-        <div class="card__content--total">
-          <p>Total</p>
-          <p>$0.00</p>
+        <div class="card__content--sum">
+          <p class="total">Total</p>
+          <p class="amount">$0.00</p>
         </div>
         <button type="button" class="order-btn">Submit Order</button>
       </div>

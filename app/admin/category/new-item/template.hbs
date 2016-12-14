@@ -1,25 +1,25 @@
-<div class="container">
-<h2 class="title">Appetizers</h2>
-{{#simple-form startingValues=model onsubmit=(action "saveForm") as |formValues|}}
-  <p class="field">
-    <label for="name">Name</label>
-    {{input type="text" placeholder='name'  reuquired=true value=formValues.name}}
-  </p>
+<div class="form">
+  <h2 class="title">New Menu Item for {{model.name}}</h2>
+  {{#simple-form startingValues=model onsubmit=(action "saveForm") as |formValues|}}
+    <p class="field">
+      <label for="name">Name</label>
+      {{input type="text" placeholder='name'  reuquired=true id="name" value=formValues.name}}
+    </p>
 
-  <p class="field">
-    <label for="price">Price</label>
-    {{input type="text" placeholder='price' reuquired=true value=formValues.price}}
-    <span class="symbol">$</span>
-  </p>
+    <p class="field">
+      <label for="price">Price</label>
+      {{input type="text" placeholder='price' reuquired=true id="price" value=formValues.price}}
+      <span class="symbol">$</span>
+    </p>
 
-  <p class="field">
-    <label for="description">Description</label>
-    {{input type="text" placeholder='description' reuquired=true value=formValues.description}}
-  </p>
+    <p class="field">
+      <label for="description">Description</label>
+      {{input type="text" placeholder='description' reuquired=true id="description" value=formValues.description}}
+    </p>
 
-  <div class="form__btn">
-    {{#link-to "admint.category.detail"}}Back{{/link-to}}
-    <button type="submit" name="button">Submit</button>
+    <div class="form__btn">
+      {{#link-to "admint.category.detail"}}Back{{/link-to}}
+      <button type="submit" name="button">Submit</button>
+    </div>
+    {{/simple-form}}
   </div>
-  {{/simple-form}}
-</div>

@@ -1,15 +1,13 @@
-<div class="container">
-  <div class="card">
-    <h3 class="card__header">New Category</h3>
-    {{#simple-form startingValues=model onsubmit=(action "saveForm") as |formValues|}}>
-      <div class="input__field">
-        <label for="name">Name</label>
-        {{input type="text" required="true" value=name id=name }}
-      </div>
-      <div class="card__footer">
-        {{#link-to "admin.category.index" class="add__new--btn"}}Back{{/link-to}}
-        <button class="add__new--btn" type="submit" name="button">Submit</button>
-      </div>
-    {{/simple-form}}
+<div class="form">
+  <h3 class="title">New Category</h3>
+  {{#simple-form startingValues=model onsubmit=(action "saveForm") as |formValues|}}>
+    <div class="input__field">
+      <label for="name">Name</label>
+      {{input type="text" required="true" value=name id=name }}
+    </div>
+    <div class="card__footer">
+      {{#link-to "admin.category.index" class="add__new--btn"}}Back{{/link-to}}
+      <button class="add__new--btn" type="submit" name="button">Submit</button>
+    </div>
+  {{/simple-form}}
   </div>
-</div>
