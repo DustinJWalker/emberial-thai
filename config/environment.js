@@ -3,7 +3,7 @@
 module.exports = function(environment) {
   var ENV = {
     DS: {
-      host: 'https://emberialthai.herokuapp.com/'
+      host: 'https://emberialthai.herokuapp.com'
     },
     modulePrefix: 'emberial-thai',
     environment: environment,

@@ -11,7 +11,7 @@
 
 // element with grid components
   &__item {
-    flex-basis: calc(100% / 3 - 1rem - 1rem);
+    flex-basis: calc(100% / 4 - 2rem - 2rem);
     flex-grow: 1;
     // modified grid__item that cannot be too wide
     &--max-half{

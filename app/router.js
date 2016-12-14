@@ -14,6 +14,7 @@ Router.map(function() {
       this.route('new-item');
     });
   });
+  this.route('edit-item-form');
 });
 
 export default Router;

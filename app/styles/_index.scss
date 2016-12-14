@@ -14,7 +14,8 @@
 
 
 .card {
-
+  display: flex;
+  flex-direction: column;
   box-shadow: 0.2rem 0.2rem 0.4rem rgba(#000, 0.4);
   background-color: $c-white;
   &__header {
@@ -39,7 +40,7 @@
 
 
 .order-btn {
-  display: flex;
+
   border: none;
   background: $c-success;
   color: $c-white;
