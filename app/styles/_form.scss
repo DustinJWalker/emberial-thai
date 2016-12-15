@@ -1,0 +1,36 @@
+.form {
+  margin-top: 1rem;
+  background: $c-white;
+  box-shadow: 0.2rem 0.2rem 0.4rem rgba(#000, 0.4);
+
+}
+
+.form__title {
+  margin: 0;
+  padding: 0.5rem;
+  background: $c-primary;
+  color: $c-white;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__input {
+  padding: 0.5rem;
+  border: 0.1rem solid $c-dark-gray;
+  outline: none;
+}
+
+.symbol {
+  display: flex;
+}
+
+.form__btn {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  border-top: 0.1rem solid $c-gray;
+}

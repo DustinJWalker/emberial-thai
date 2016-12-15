@@ -1,0 +1,12 @@
+.app {
+  &__top {
+    padding: 1rem;
+    border-bottom: 0.1rem solid #bbb;
+    background: $c-primary;
+
+  }
+
+  &__content {
+    padding: 1rem;
+  }
+}

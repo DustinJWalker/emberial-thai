@@ -1,0 +1,13 @@
+<div class="form">
+  <h3 class="form__title">New Category</h3>
+  {{#simple-form startingValues=model onsubmit=(action "saveForm") as |formValues|}}>
+    <div class="input__field">
+      <label class="form__label" for="name">Name</label>
+      {{input class="form__input" type="text" required="true" value=name id=name }}
+    </div>
+    <div class="form__btn">
+      {{#link-to "admin.category.index" class="add__new--btn"}}Back{{/link-to}}
+      <button class="add__new--btn" type="submit" name="button">Submit</button>
+    </div>
+  {{/simple-form}}
+  </div>
