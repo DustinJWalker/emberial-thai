@@ -6,9 +6,9 @@ export default Ember.Controller.extend({
       this.model.setProperties(formValues);
 
       this.model.save()
-      .then(() => {
-        this.transitionToRoute('admin.category.detail' this.get('model.menuCategory.id'));
-      });
+        .then(() => {
+          this.transitionToRoute('admin.category.detail', this.get('model.menuCategory.id'));
+        });
+      },
     },
-  },
-});
+  });

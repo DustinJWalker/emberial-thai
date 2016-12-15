@@ -1,9 +1,6 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-  import Ember from 'ember';
-
-export default Ember.Controller.extend({
   actions: {
     saveForm(formValues) {
     if (formValues) {
@@ -17,8 +14,7 @@ export default Ember.Controller.extend({
         this.transitionToRoute('admin.category.index');
       });
     } else {
-      alert('Error saving menu item');
+      alert('Menu item cannot be saved');
     }
   }
 }});
-});
