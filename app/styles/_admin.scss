@@ -1,9 +1,33 @@
 .cat-btn {
   display: inline-block;
-  float: left;
   margin: 1rem;
   background: $c-primary;
   color: $c-white;
   padding: 1rem;
   text-decoration: none;
+}
+
+.table {
+  width: 100%;
+  background: $c-white;
+  border-collapse: collapse;
+  box-shadow: rgba(0, 0, 0, 0.4);
+}
+
+.table__row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+}
+
+.table__row--end {
+  justify-content: flex-end;
+}
+
+.table__row--header {
+  background: $c-gray;
+}
+
+.table__row--group {
+  padding: 0;
 }

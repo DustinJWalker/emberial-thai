@@ -1,25 +1,25 @@
   <div class="form">
-    <h2 class="title">Edit Item {{model.name}}</h2>
+    <h2 class="form__title">Edit Item {{model.name}}</h2>
     {{#simple-form startingValues=model onsubmit=(action "saveForm") as |formValues|}}
       <p class="field">
-        <label for="name">Name</label>
-        {{input type="text" placeholder='name'  reuquired=true id="name" value=formValues.name}}
+        <label class="form__label"for="name">Name</label>
+        {{input class="form__input" type="text" placeholder='name'  reuquired=true id="name" value=formValues.name}}
       </p>
 
       <p class="field">
-        <label for="price">Price</label>
-        {{input type="text" placeholder='price' reuquired=true id="price" value=formValues.price}}
+        <label class="form__label" for="price">Price</label>
+        {{input class="form__input" type="text" placeholder='price' reuquired=true id="price" value=formValues.price}}
         <span class="symbol">$</span>
       </p>
 
       <p class="field">
-        <label for="description">Description</label>
-        {{input type="text" placeholder='description' id="description" reuquired=true value=formValues.description}}
+        <label class="form__label" for="description">Description</label>
+        {{input class="form__input" type="text" placeholder='description' id="description" reuquired=true value=formValues.description}}
       </p>
 
       <div class="form__btn">
-        {{#link-to "admint.category.detail"}}Back{{/link-to}}
-        <button type="submit" name="button">Submit</button>
+        {{#link-to  "admint.category.detail" class="cat-btn"}}Back{{/link-to}}
+        <button class="cat-btn" type="submit" name="button">Submit</button>
       </div>
       {{/simple-form}}
     </div>

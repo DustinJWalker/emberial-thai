@@ -1,9 +1,9 @@
 <div class="form">
-  <h3 class="title">New Category</h3>
+  <h3 class="form__title">New Category</h3>
   {{#simple-form startingValues=model onsubmit=(action "saveForm") as |formValues|}}>
     <div class="input__field">
-      <label for="name">Name</label>
-      {{input type="text" required="true" value=name id=name }}
+      <label class="form__label" for="name">Name</label>
+      {{input class="form__input" type="text" required="true" value=name id=name }}
     </div>
     <div class="card__footer">
       {{#link-to "admin.category.index" class="add__new--btn"}}Back{{/link-to}}

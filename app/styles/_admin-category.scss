@@ -4,7 +4,6 @@
 
 .add__new--btn {
   display: block;
-  float: right;
   margin: 1rem;
   background: $c-success;
   border: none;
@@ -16,7 +15,6 @@
 .delete-btn {
   display: inline-block;
   padding: 1rem;
-  float: left;
   border: 0;
   background: $c-warning;
   text-decoration: none;

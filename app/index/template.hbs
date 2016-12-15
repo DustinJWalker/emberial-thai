@@ -1,45 +1,53 @@
 <div class="hero">
-    <h2 class="hero-title">Get Food Delivered Fast</h2>
+  <h2 class="hero-title">Get Food Delivered FAST!</h2>
 </div>
 
+<div class="container">
+  <div class="grid">
+    <div class="grid__item grid__item--left">
+      <div class="title">Menu</div>
+      {{#each model as |value|}}
 
-  <div class="container">
-
-    <div class="grid">
-    {{!-- <div class="grid__item"> --}}
-      <div class="grid__item grid__item--left">
-        <h3 class="title">Menu</h3>
-        {{#each model as |value|}}
         <div class="card">
-          <h2 class="card__header">{{ value.name }}</h2>
+          <p class="card__header">{{ value.name }}</p>
+
           {{#each value.menuItems as |item|}}
-        <div class="card__content">
-          <p class="card__name">{{ item.name }}</p>
-          <p class="card__description">{{ item.description }}</p>
-          <p class="card__price">{{ item.price }}</p>
-          <button class="order-btn">Order</button>
+            <div class="card__content">
+              <div class="card__item">
+                <div class="card__text">
+                  <p class="card__name">{{ item.name }}</p>
+                  <p class="card__description">{{ item.description }}</p>
+                </div>
+                <div class="card__price">${{ item.price }}</div>
+              </div>
+              <button class="card__btn">Order</button>
+            </div>
+          {{/each}}
         </div>
 
-          {{/each}}
-      </div>
       {{/each}}
     </div>
 
-    <div class="grid__item grid__item--right">
-      <h3 class="title">Your Order</h3>
+    <div class="grid__item">
+      <div class="title">Your Order</div>
       <div class="card">
-        <h2 class="card__header">Cart</h2>
+        <p class="card__header">Cart</p>
         <div class="card__content">
-          <h4>Add Something</h4>
-          <p>No items have been added to the cart!</p>
+          <div class="card__hero">
+            <p class="card__name">Add Something</p>
+            <p class="card__description">No items have been added to the cart!</p>
+          </div>
+
+          <div class="card__sum">
+            <p class="card__total">Total</p>
+            <p class="card__amount">$0.00</p>
+          </div>
+
+          <div class="card__hero">
+            <button class="order-btn--full">Submit Order</button>
+          </div>
         </div>
-        <div class="card__content--sum">
-          <p class="total">Total</p>
-          <p class="amount">$0.00</p>
-        </div>
-        <button type="button" class="order-btn">Submit Order</button>
       </div>
     </div>
-  {{!-- </div> --}}
   </div>
 </div>

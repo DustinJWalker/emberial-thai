@@ -1,24 +1,29 @@
 .container {
-  max-width: 70rem;
-;
+  max-width: $m-container;
   margin: 0 auto;
+  padding: 1rem;
+
 }
 
-
-// blcok level grid component
 .grid {
-    display: flex;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -1rem;
 
-// element with grid components
   &__item {
-    flex-basis: calc(100% / 4 - 2rem - 2rem);
-    flex-grow: 1;
-    // modified grid__item that cannot be too wide
-    &--max-half{
-      max-width: 50%;
-      @media(max-width: 500px) {
-        max-width: 100%;
-      }
+    flex-basis: calc(100% / 3 -1rem -1rem);
+    margin: $m-gutter;
+
+    &__left {
+      flex-grow: 1;
+    }
+  }
+}
+
+@media (max-width: 460px) {
+  .grid {
+    &__item {
+      flex-direction: column;
     }
   }
 }
