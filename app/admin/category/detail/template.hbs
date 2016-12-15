@@ -4,7 +4,7 @@
       <button class="delete__btn">{{ action "destroyRecord" model}}Delete</button>
       {{#link-to "admin.category.new-item" model.id class="add__new--btn" }}Add New Menu Item{{/link-to}}
     </div>
-    <thead class="table__row table__row--header">
+    <thead class="table__row--header">
        <span>Name</span>
     </thead>
      {{#each model.menuItems as |item|}}

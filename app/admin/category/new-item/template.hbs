@@ -1,5 +1,5 @@
 <div class="form">
-  <h2 class="title">New Menu Item for {{model.name}}</h2>
+  <h2 class="form__title">New Menu Item for {{model.name}}</h2>
   {{#simple-form startingValues=model onsubmit=(action "saveForm") as |formValues|}}
     <p class="field">
       <label class="form__label" for="name">Name</label>
@@ -9,7 +9,9 @@
     <p class="field">
       <label class="form__label" for="price">Price</label>
       {{input class="form__input" type="text" placeholder='price' reuquired=true id="price" value=formValues.price}}
-      <span class="symbol">$</span>
+      <div class="symbol">
+      <span>$</span>
+    </div>
     </p>
 
     <p class="field">

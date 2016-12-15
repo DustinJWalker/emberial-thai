@@ -22,3 +22,15 @@
   border: 0.1rem solid $c-dark-gray;
   outline: none;
 }
+
+.symbol {
+  display: flex;
+}
+
+.form__btn {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  border-top: 0.1rem solid $c-gray;
+}
